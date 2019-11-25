@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DekCamp</string>
+    <string name="genderDropdown">Android Spinner</string>
+
+    <string-array name="genderList">
+        <item>ชาย</item>
+        <item>หญิง</item>
+
+    </string-array>
 </resources>

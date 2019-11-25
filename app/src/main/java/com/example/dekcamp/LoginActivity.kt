@@ -1,7 +1,9 @@
 package com.example.dekcamp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 
 class LoginActivity : AppCompatActivity() {
 
@@ -10,5 +12,17 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
 
+    }
+
+    fun onClickedRegister(view: View) {
+        val intent = Intent(this, RegisterActivity::class.java)
+
+        startActivity(intent)
+    }
+
+    fun onClickedLogin(view: View) {
+        val intent = Intent(this, HomeActivity::class.java)
+
+        startActivity(intent)
     }
 }

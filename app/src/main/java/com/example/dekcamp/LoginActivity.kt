@@ -16,13 +16,11 @@ class LoginActivity : AppCompatActivity() {
 
     fun onClickedRegister(view: View) {
         val intent = Intent(this, RegisterActivity::class.java)
-
         startActivity(intent)
     }
 
     fun onClickedLogin(view: View) {
         val intent = Intent(this, HomeActivity::class.java)
-
         startActivity(intent)
     }
 }

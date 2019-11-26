@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "882659241176",
+    "firebase_url": "https://dekcamp-1020a.firebaseio.com",
+    "project_id": "dekcamp-1020a",
+    "storage_bucket": "dekcamp-1020a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882659241176:android:a3aa87122ccfa2a4f5fbad",
+        "android_client_info": {
+          "package_name": "com.example.dekcamp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882659241176-eq44mkfnijci4cmc3p58im94tf4qqcsf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dekcamp",
+            "certificate_hash": "d93278b53b02ac874ff15fcf51a2bbdb631c0701"
+          }
+        },
+        {
+          "client_id": "882659241176-453dcvqbfqcjjbjrqqd62q5pvlo4tb11.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpgzuxFQbrdXUncQG8ytPsYSFb8u9Vqe8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882659241176-453dcvqbfqcjjbjrqqd62q5pvlo4tb11.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

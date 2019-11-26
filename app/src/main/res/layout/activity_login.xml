@@ -21,42 +21,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/inputEmail"
-        android:layout_width="259dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
-        android:background="#56000000"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:textColor="#DDDDDD"
-        android:textColorHint="#BEF7F7F7"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dek_camp" />
 
-    <EditText
-        android:id="@+id/inputPassword"
-        android:layout_width="258dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputEmail"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
-        android:background="#66000000"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColor="#DDDDDD"
+        android:layout_marginTop="120dp"
+        android:hint="@string/Email"
         android:textColorHint="#BFFFFFFF"
-        android:textSize="25dp"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/dek_camp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPassword"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:hint="@string/Password"
+        android:textColorHint="#BFFFFFFF"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"
+            android:inputType="textPassword"
+            android:textColor="#DDDDDD"
+            android:textSize="25sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <LinearLayout
         android:layout_width="0dp"
@@ -80,7 +96,6 @@
                 android:id="@+id/loginButton"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:onClick="onClickedLogin"
                 android:text="login" />
         </LinearLayout>
 
@@ -96,7 +111,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:onClick="onClickedRegister"
-                android:text="Regiser"/>
+                android:text="Regiser" />
         </LinearLayout>
 
     </LinearLayout>

@@ -6,8 +6,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".HomeActivity">
+    android:orientation="vertical">
 
 
         <LinearLayout
@@ -70,8 +69,8 @@
                     tools:layout_conversion_absoluteWidth="391dp" />
 
 
-                <LinearLayout
-                    android:id="@+id/button_layout"
+                <HorizontalScrollView
+                    android:id="@+id/box"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -80,7 +79,13 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView14"
                     tools:layout_conversion_absoluteHeight="0dp"
-                    tools:layout_conversion_absoluteWidth="0dp" />
+                    tools:layout_conversion_absoluteWidth="0dp" >
+                    <LinearLayout
+                        android:id="@+id/button_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
 
                 <TextView
                     android:id="@+id/textView7"
@@ -91,7 +96,7 @@
                     android:text="ใกล้หมดเวลา ต้องรีบแล้วนะ!"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/box"
                     tools:layout_conversion_absoluteHeight="34dp"
                     tools:layout_conversion_absoluteWidth="391dp" />
 

@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun onClickedLogin(view: View) {
-        val intent = Intent(this, HomeActivity::class.java)
+        val intent = Intent(this, SidebarActivity::class.java)
         startActivity(intent)
     }
 }

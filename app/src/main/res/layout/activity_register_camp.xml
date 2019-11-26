@@ -9,92 +9,534 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="584dp">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ชื่อค่าย"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/nameCampEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:text="ข้อมูลค่าย"
                 android:textSize="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView13"
+            <LinearLayout
+                android:id="@+id/linearLayout3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ชื่อค่าย"
-                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.108"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-            <EditText
-                android:id="@+id/nameCampEditText"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ประเภทค่าย"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerCamp"
+                        android:layout_width="225dp"
+                        android:layout_height="39dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="จำนวนที่รับ"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/amountEditText"
+                        android:layout_width="109dp"
+                        android:layout_height="60dp"
+                        android:ems="10"
+                        android:inputType="numberSigned" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.191"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-            <TextView
-                android:id="@+id/textView14"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="จัดตั้งแต่"
+                        android:textSize="20dp"
+                        tools:layout_editor_absoluteX="170dp"
+                        tools:layout_editor_absoluteY="247dp" />
+
+                    <TextView
+                        android:id="@+id/dateTV1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dd/mm/yyyy"
+                        android:textSize="20dp"
+                        tools:layout_editor_absoluteX="164dp"
+                        tools:layout_editor_absoluteY="139dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/fromButton"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    tools:layout_editor_absoluteX="173dp"
+                    tools:layout_editor_absoluteY="987dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ถึง"
+                        android:textSize="20dp"
+                        tools:layout_editor_absoluteX="194dp"
+                        tools:layout_editor_absoluteY="631dp" />
+
+                    <TextView
+                        android:id="@+id/dateTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="dd/mm/yyyy"
+                        android:textSize="20dp"
+                        tools:layout_editor_absoluteX="164dp"
+                        tools:layout_editor_absoluteY="399dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/toButton"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    tools:layout_editor_absoluteX="177dp"
+                    tools:layout_editor_absoluteY="855dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="เข้าร่วมแบบ"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="156dp"
+                    tools:layout_editor_absoluteY="1107dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/standRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="ค้างคืน"
+                        tools:layout_editor_absoluteX="182dp"
+                        tools:layout_editor_absoluteY="362dp" />
+
+                    <RadioButton
+                        android:id="@+id/gobackRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="ไป-กลับ"
+                        tools:layout_editor_absoluteX="166dp"
+                        tools:layout_editor_absoluteY="823dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="วันที่ปิดรับสมัคร"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="139dp"
+                    tools:layout_editor_absoluteY="113dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dateTV3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="dd/mm/yyyy"
+                        android:textSize="20dp"
+                        tools:layout_editor_absoluteX="164dp"
+                        tools:layout_editor_absoluteY="166dp" />
+
+                    <Button
+                        android:id="@+id/closeButton"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        tools:layout_editor_absoluteX="174dp"
+                        tools:layout_editor_absoluteY="1033dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="สถานที่จัด"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="162dp"
+                    tools:layout_editor_absoluteY="961dp" />
+
+                <EditText
+                    android:id="@+id/placeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="425dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ค่าใช้จ่าย"
+                        android:textSize="20dp"
+                        tools:layout_editor_absoluteX="166dp"
+                        tools:layout_editor_absoluteY="1080dp" />
+
+
+                    <EditText
+                        android:id="@+id/costEditText"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        tools:layout_editor_absoluteX="146dp"
+                        tools:layout_editor_absoluteY="1133dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="จ่ายเมื่อ"
+                        android:textSize="20dp" />
+
+
+                    <Spinner
+                        android:id="@+id/paySpinner"
+                        android:layout_width="199dp"
+                        android:layout_height="41dp"
+                        tools:layout_editor_absoluteX="106dp"
+                        tools:layout_editor_absoluteY="273dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="เกณฑ์ที่อายุขั้นต่ำ"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="130dp"
+                    tools:layout_editor_absoluteY="738dp" />
+
+                <EditText
+                    android:id="@+id/oldEditText"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="146dp"
+                    tools:layout_editor_absoluteY="1279dp" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="จัดโดย"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="176dp"
+                    tools:layout_editor_absoluteY="764dp" />
+
+                <EditText
+                    android:id="@+id/byEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="193dp" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="อัพโหลดภาพโปสเตอร์ค่าย"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="94dp"
+                    tools:layout_editor_absoluteY="934dp" />
+
+                <Button
+                    android:id="@+id/selectButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="เลือกไฟล์"
+                    tools:layout_editor_absoluteX="162dp"
+                    tools:layout_editor_absoluteY="314dp" />
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="ช่องทางติดต่อ"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="146dp"
+                    tools:layout_editor_absoluteY="711dp" />
+
+                <EditText
+                    android:id="@+id/contactEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="1225dp" />
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="มีเกียรติบัตร, ประกาศนียบัตร หรือหนังสือรับรอง"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="7dp"
+                    tools:layout_editor_absoluteY="658dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+                <RadioButton
+                    android:id="@+id/haveRadioButton"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:text="มี"
+                    tools:layout_editor_absoluteX="186dp"
+                    tools:layout_editor_absoluteY="791dp" />
+
+                <RadioButton
+                    android:id="@+id/nothaveRadioButton"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="ไม่มี"
+                    tools:layout_editor_absoluteX="178dp"
+                    tools:layout_editor_absoluteY="902dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="คำอธิบาย"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/descriptionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/sendDataButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:text="ประเภทค่าย"
-                android:textSize="20dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="40dp"
+                android:background="#CEB80F"
+                android:text="ส่งข้อมูล"
+                android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.129"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameCampEditText" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout14" />
 
-            <Spinner
-                android:id="@+id/spinnerCamp"
-                android:layout_width="197dp"
-                android:layout_height="42dp"
-                android:layout_marginStart="40dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="จำนวนที่รับ"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.876"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameCampEditText" />
-
-            <EditText
-                android:id="@+id/amountEditText"
-                android:layout_width="109dp"
-                android:layout_height="44dp"
-                android:layout_marginEnd="36dp"
-                android:ems="10"
-                android:inputType="numberSigned"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.988"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

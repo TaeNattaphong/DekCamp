@@ -1,6 +1,7 @@
 package com.example.dekcamp
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -59,6 +60,8 @@ class RegisterActivity : AppCompatActivity() {
 
 
     fun onClickedBack(view: View) {
+        val intent = Intent(this, RegisterCampActivity::class.java)
+        startActivity(intent)
         finish()
     }
 

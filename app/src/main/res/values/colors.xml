@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">@color/green_dark</color>
+    <color name="colorPrimaryDark">@color/green_only</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="blue_dark">#013F73</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="yellow_american">#ffb600</color>
+    <color name="white_proper">#DDDDDD</color>
+    <color name="blue_cyan">#589ea5</color>
+
+    <color name="grey_away">#999999</color>
+    <color name="yellow_accept">#F0882f</color>
+    <color name="red_new">#F40234</color>
+    <color name="green_success">#688b2e</color>
+    <color name="green_light">#7FE706</color>
+
+    <color name="green_dark">#065517</color>
+    <color name="green_only">#126723</color>
+    <color name="green_mind">#47a347</color>
+
+    <color name="lake1">#1b6285</color>
+    <color name="lake2">#377e7d</color>
+    <color name="lake3">#50a17a</color>
+    <color name="lake4">#78c561</color>
+    <color name="lake5">#b0db51</color>
 </resources>

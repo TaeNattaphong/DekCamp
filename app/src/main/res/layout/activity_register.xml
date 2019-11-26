@@ -115,7 +115,7 @@
                     android:layout_width="176dp"
                     android:layout_height="45dp"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.148"
                     app:layout_constraintStart_toStartOf="parent"
@@ -277,6 +277,7 @@
                     app:layout_constraintHorizontal_bias="0.795"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/phoneEditText" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

@@ -2,12 +2,14 @@ package com.example.dekcamp
 
 import android.app.DatePickerDialog
 import android.icu.util.Calendar
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.annotation.RequiresApi
 import com.example.dekcamp.data.User
 import kotlinx.android.synthetic.main.activity_register.*
 import java.util.logging.Logger
@@ -17,6 +19,7 @@ class RegisterActivity : AppCompatActivity() {
     var generList = arrayOf("Male", "Female")
 
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)

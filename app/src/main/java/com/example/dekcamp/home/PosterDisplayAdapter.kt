@@ -33,8 +33,7 @@ class PosterDisplayAdapter() :
 
     override fun getItemCount(): Int {
         return 10
-    }
-
+}
     override fun onCreateViewHolder(parent: ViewGroup, pos: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.poster_display, parent, false)

@@ -67,7 +67,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/line1" />
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/firstnameEditText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -86,10 +86,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.098"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText" />
+                    app:layout_constraintTop_toBottomOf="@+id/firstnameEditText" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/lastnameEditText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -108,14 +108,14 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.101"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                    app:layout_constraintTop_toBottomOf="@+id/lastnameEditText" />
 
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/studentIdEditText"
                     android:layout_width="176dp"
                     android:layout_height="45dp"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.148"
                     app:layout_constraintStart_toStartOf="parent"
@@ -130,10 +130,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.808"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                    app:layout_constraintTop_toBottomOf="@+id/lastnameEditText" />
 
                 <Spinner
-                    android:id="@+id/gender"
+                    android:id="@+id/genderSpinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -152,7 +152,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText3" />
+                    app:layout_constraintTop_toBottomOf="@+id/studentIdEditText" />
 
                 <TextView
                     android:id="@+id/dateTv"
@@ -174,7 +174,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.913"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/gender" />
+                    app:layout_constraintTop_toBottomOf="@+id/genderSpinner" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -188,7 +188,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/dateTv" />
 
                 <EditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/emailEditText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -218,10 +218,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText4" />
+                    app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
                 <EditText
-                    android:id="@+id/editText5"
+                    android:id="@+id/passwordEditText"
                     android:layout_width="307dp"
                     android:layout_height="45dp"
                     android:ems="10"
@@ -240,10 +240,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText5" />
+                    app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
                 <EditText
-                    android:id="@+id/editText6"
+                    android:id="@+id/phoneEditText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -264,7 +264,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.204"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText6" />
+                    app:layout_constraintTop_toBottomOf="@+id/phoneEditText" />
 
                 <Button
                     android:id="@+id/registerButton"
@@ -276,7 +276,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.795"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText6" />
+                    app:layout_constraintTop_toBottomOf="@+id/phoneEditText" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

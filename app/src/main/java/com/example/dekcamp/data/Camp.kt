@@ -19,5 +19,6 @@ data class Camp(
     var amountPeople: Int = 0,
     var payWhen: String = "",
     var campType: String = "",           // camp type
+    var image: String = "",
     var isAvailable: Boolean = true
 )

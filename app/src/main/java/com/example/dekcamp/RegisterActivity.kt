@@ -62,8 +62,6 @@ class RegisterActivity : AppCompatActivity() {
 
 
     fun onClickedBack(view: View) {
-        val intent = Intent(this, RegisterCampActivity::class.java)
-        startActivity(intent)
         finish()
     }
 

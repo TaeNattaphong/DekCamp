@@ -18,7 +18,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.example.dekcamp.data.User
 import com.example.dekcamp.data.Util

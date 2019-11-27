@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.dekcamp.ui.gallery.GalleryFragment"
+        android:name="com.example.dekcamp.ui.announcement.AnnouncementFragment"
         android:label="@string/menu_announce"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_announcement" />
 
 <!--    <fragment-->
 <!--        android:id="@+id/nav_slideshow"-->
@@ -31,13 +31,13 @@
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.dekcamp.ui.share.ShareFragment"
+        android:name="com.example.dekcamp.ui.profile.ProfileFragment"
         android:label="@string/menu_profile"
-        tools:layout="@layout/fragment_share" />
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.dekcamp.ui.send.SendFragment"
+        android:name="com.example.dekcamp.ui.sign_out.SignOutFragment"
         android:label="@string/menu_sign_out"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/fragment_sign_out" />
 </navigation>

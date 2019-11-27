@@ -45,35 +45,96 @@ class RegisterActivity : AppCompatActivity() {
         val month = c.get(Calendar.MONTH)
         val day = c.get(Calendar.DAY_OF_MONTH)
 
-        pickDateBtn.setOnClickListener{
-            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
-                dateTv.text = "$dayOfMonth/$month/$year"
-            }, year, month, day)
+        pickDateBtn.setOnClickListener {
+            val dpd = DatePickerDialog(
+                this,
+                DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
+                    dateTv.text = "$dayOfMonth/$month/$year"
+                },
+                year,
+                month,
+                day
+            )
             dpd.show()
         }
 
     }
 
 
-
     fun onClickedBack(view: View) {
-        val intent = Intent(this, RegisterCampActivity::class.java)
-        startActivity(intent)
         finish()
     }
 
     fun onClickedRegisterInRegisterPage(view: View) {
+
+        if (dateTv.text.toString() == "dd/mm/yyyy") {
+            Toast.makeText(this, "กรุณาใส่วันเกิดให้เรียบร้อย", Toast.LENGTH_LONG).show()
+            return
+        }
+
         val firstname = firstnameEditText.text.toString()
         val lastname = lastnameEditText.text.toString()
+        val nickName = nicknameEditText.text.toString()
         val student_id = studentIdEditText.text.toString()
         val gender = genderSpinner.selectedItem.toString()
         val brithday = Util.DATE_FORMAT.parse(dateTv.text.toString())!!.time
         val email = emailEditText.text.toString()
         val password = passwordEditText.text.toString()
+        val password2 = passwordEditText2.text.toString()
         val phone = phoneEditText.text.toString()
-        //object of candidate
-//        val candidate = User(fristname, lastname, student_id, gender, brithday, 0, password, phone)
-        val candidate = User(firstname, lastname, "", student_id, gender, brithday, "$email@ku.th", phone, "")
+        val allegic = allegicEditText.text.toString()
+
+        val arrEditText = arrayListOf(
+            firstnameEditText,
+            lastnameEditText,
+            nicknameEditText,
+            studentIdEditText,
+            emailEditText,
+            phoneEditText
+        )
+
+        if (brithday >= System.currentTimeMillis()) {
+            Toast.makeText(this, "วันเกิดต้องน้อยกว่าวลาปัจจุบัน", Toast.LENGTH_LONG).show()
+            return
+        }
+
+        arrEditText.forEach {
+            if (it.text.toString() == "") {
+                Toast.makeText(this, "กรุณากรอกชื่อ-นามสกุล ชื่อเล่น รหัสนิสิต email และเบอร์โทรศัพท์ให้เรียบร้อย", Toast.LENGTH_LONG).show()
+                return
+            }
+            if (it.text.contains(Regex("[&=_'${'-'}+,<>${'{'}${'}'}{}.!@]"))) {
+            Toast.makeText(this, "ไม่สารถใช้ตัวอักษร & = ${'_'} - + < > ${'['} ${']'} { } . ! @ ในชื่อได้", Toast.LENGTH_LONG).show()
+            return
+        }
+
+//            if (it.toString().contains(Regex("[${Regex.escape("&=_-+<>][}{!@")}]"))) {
+//                Toast.makeText(this, "ไม่สารถใช้ตัวอักษร & = ${'_'} - + < > ${'['} ${']'} { } . ! @ ในชื่อได้", Toast.LENGTH_LONG).show()
+//                return
+//            }
+        }
+
+        if (allegic.contains(Regex("[&=_'${'-'}+,<>${'{'}${'}'}{}.!@]"))) {
+            Toast.makeText(this, "ไม่สารถใช้ตัวอักษร & = ${'_'} - + < > ${'['} ${']'} { } . ! @ ในชื่อได้", Toast.LENGTH_LONG).show()
+            return
+        }
+
+        if (password != password2) {
+            Toast.makeText(this, "password ทั้ง 2 ไม่ถูกต้อง", Toast.LENGTH_LONG).show()
+            return
+        }
+        if (password.length <= 5) {
+            Toast.makeText(this, "จำนวน password ต้องมากกว่า 5 ตัวขึ้นไป", Toast.LENGTH_LONG).show()
+            return
+        }
+        if (phone.length != 10) {
+            Toast.makeText(this, "กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง", Toast.LENGTH_LONG).show()
+            return
+        }
+
+
+        val candidate =
+            User(firstname, lastname, nickName, student_id, gender, brithday, "$email@ku.th", phone, "")
         Log.i("registery", candidate.toString())
 
         registerFirebase(candidate.email, password, candidate)
@@ -90,18 +151,21 @@ class RegisterActivity : AppCompatActivity() {
                 newUser.user_id = user
                 mRef.child("users").child(user).setValue(newUser)
 
-                Toast.makeText(applicationContext, "คุณ ${newUser.firstname} ${newUser.lastname} ถูกเพิ่มเข้าสู่ระบบแล้ว", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    applicationContext,
+                    "คุณ ${newUser.firstname} ${newUser.lastname} ถูกเพิ่มเข้าสู่ระบบแล้ว",
+                    Toast.LENGTH_LONG
+                ).show()
 
-                Util.currentUser = newUser
+                Util.currentUser.value = newUser
 
 
                 val intent = Intent(this, LoadingActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
-            }
-            else {
+            } else {
                 val e = task.exception as FirebaseAuthException
-                Toast.makeText(this, "Failed Registration: "+e.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Failed Registration: " + e.message, Toast.LENGTH_SHORT).show()
             }
         }
     }

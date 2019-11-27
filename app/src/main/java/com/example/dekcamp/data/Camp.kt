@@ -4,19 +4,21 @@ data class Camp(
     var camp_id: String = "",
     var campname: String = "",
     var detail: String = "",
-    var adress: String = "",
+    var address: String = "",
     var contact: String = "",
-    var price: Int = 0,
-    var certificate: String,
-    var maxPeople: Int,
-    var minAge: Int,
-    var campStrat: String,
-    var campEnd: String,
-    var startRegis: String,
-    var endRegis: String,
-    var vote: Int,
-    var typeCamp: String,
-    var amountPeople: Int,
-    var payWhen: String,
-    var camp: String
+    var price: Double = -1.0,
+    var certificate: Boolean = false,
+    var maxPeople: Int = -1,
+    var minAge: Int = -1,
+    var campStrat: Long = -1,     // day
+    var campEnd: Long = -1,       // day
+    var startRegis: Long = -1,    // day
+    var endRegis: Long = -1,      // day
+    var vote: Int = 0,
+    var durationType: String = "",      // duration type
+    var amountPeople: Int = 0,
+    var payWhen: String = "",
+    var campType: String = "",           // camp type
+    var image: String = "",
+    var isAvailable: Boolean = true
 )

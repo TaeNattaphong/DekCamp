@@ -97,8 +97,8 @@ class RegisterActivity : AppCompatActivity() {
 
 
                 val intent = Intent(this, LoadingActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
-                finish()
             }
             else {
                 val e = task.exception as FirebaseAuthException

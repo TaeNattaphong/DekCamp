@@ -27,7 +27,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageCamp"
                     android:layout_width="match_parent"
                     android:layout_height="275dp"
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
@@ -44,10 +44,12 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView2"
+                            android:id="@+id/campTextView"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="ค่ายอาสา" />
+                            android:layout_marginRight="20dp"
+                            android:text="ค่ายอาสา"
+                            android:textSize="18sp" />
 
                         <Button
                             android:id="@+id/button"
@@ -65,53 +67,64 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/namebyTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="มหกรรม ในความทรงจำ โดย ชื่อคนจัด" />
+                        android:text="มหกรรม ในความทรงจำ โดย ชื่อคนจัด"
+                        android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/textView22"
+                        android:id="@+id/voteTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="มีคนให้ดาวแล้ว  86 ดวง" />
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/descriptionTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="6"
                         android:text="รายละเอียดต่างๆของค่าย" />
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="รายละเอียดของค่าย"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView27"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="_____________________________" />
-
-                <TextView
-                    android:id="@+id/textView30"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="17 มกราคม 2563 - 22 มกราคม 2563 ( ค้างคืน )" />
-
-                <TextView
-                    android:id="@+id/textView26"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="รายละเอียดของค่าย" />
 
                 <TextView
                     android:id="@+id/textView29"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="วันที่จัดค่าย" />
+                    android:layout_marginTop="20dp"
+                    android:text="วันที่จัดค่าย"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/campdayTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="17 มกราคม 2563 - 22 มกราคม 2563 ( ค้างคืน )" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -130,10 +143,11 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="จำนวนที่รับ" />
+                                android:text="จำนวนที่รับ"
+                                android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView35"
+                                android:id="@+id/amountTextView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -150,10 +164,11 @@
                                 android:id="@+id/textView36"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="เกณฑ์การรับสมัคร" />
+                                android:text="เกณฑ์การรับสมัคร"
+                                android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView38"
+                                android:id="@+id/oldTextView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="อายุ 20 ปีขึ้นไป" />
@@ -166,10 +181,12 @@
                     android:id="@+id/textView41"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="สถานที่จัดค่าย" />
+                    android:layout_marginTop="20dp"
+                    android:text="สถานที่จัดค่าย"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView42"
+                    android:id="@+id/placeTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="โรงแรม โฮมผุเตย จังหวัด กาญจนบุรี" />
@@ -178,10 +195,12 @@
                     android:id="@+id/textView43"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="จัดโดย" />
+                    android:layout_marginTop="20dp"
+                    android:text="จัดโดย"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView46"
+                    android:id="@+id/byTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="ชื่อคนจัดค่าย" />
@@ -190,10 +209,12 @@
                     android:id="@+id/textView48"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ค่าใช้จ่าย" />
+                    android:layout_marginTop="20dp"
+                    android:text="ค่าใช้จ่าย"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView49"
+                    android:id="@+id/costTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1300 บาท (จ่ายตอนสมัคร)" />
@@ -202,10 +223,12 @@
                     android:id="@+id/textView50"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="มีประกาศนียบัตรหรือไม่" />
+                    android:layout_marginTop="20dp"
+                    android:text="มีประกาศนียบัตรหรือไม่"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView51"
+                    android:id="@+id/certificateTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="ไม่มี" />
@@ -214,10 +237,12 @@
                     android:id="@+id/textView52"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ปิดรับสมัครวันที่" />
+                    android:layout_marginTop="20dp"
+                    android:text="ปิดรับสมัครวันที่"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView53"
+                    android:id="@+id/closeTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="30 ธันวาคม 2562" />
@@ -226,18 +251,22 @@
                     android:id="@+id/textView54"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ช่องทางติดต่อ" />
+                    android:layout_marginTop="20dp"
+                    android:text="ช่องทางติดต่อ"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView55"
+                    android:id="@+id/contactTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="หน้าเพจ xxxxxx หรือติดต่อมาที่  xxx@gmail.com" />
 
                 <Button
-                    android:id="@+id/button2"
-                    android:layout_width="match_parent"
+                    android:id="@+id/regisButton"
+                    android:layout_width="175dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="40dp"
                     android:text="สมัครเลย!!" />
 
             </LinearLayout>

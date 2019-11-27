@@ -16,13 +16,10 @@
         <activity android:name=".CampDetailActivity"></activity>
         <activity android:name=".RegisterCampActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".DrawerActivity" />
         <activity android:name=".CampActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity
-            android:name=".LoginActivity"
-        <activity android:name=".TestActivity">
-        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".TestActivity"></activity>
         <activity
             android:name=".LoadingActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -36,14 +33,6 @@
             android:name=".SidebarActivity"
             android:label="@string/title_activity_sidebar"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterCampActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".DrawerActivity" />
-        <activity android:name=".CampActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

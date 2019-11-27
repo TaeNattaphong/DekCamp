@@ -148,7 +148,6 @@ class AnnouncementFragment : Fragment() {
             val isCerficate = root.findViewById<TextView>(R.id.isCerficate)
             // Check which radio button was clicked
 
-            Log.i("getValueOn", "id: ${view.id}")
             when (view.getId()) {
                 R.id.standRadioButton ->
                     if (checked) {

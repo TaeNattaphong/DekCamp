@@ -49,7 +49,8 @@ class RegisterActivity : AppCompatActivity() {
             val dpd = DatePickerDialog(
                 this,
                 DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
-                    dateTv.text = "$dayOfMonth/$month/$year"
+                    c.set(year, month, dayOfMonth)
+                    dateTv.text = Util.DATE_FORMAT.format(c.time)
                 },
                 year,
                 month,

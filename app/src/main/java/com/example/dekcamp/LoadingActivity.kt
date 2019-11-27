@@ -25,6 +25,7 @@ class LoadingActivity : AppCompatActivity() {
             val mRef = FirebaseDatabase.getInstance().getReference("users").child(user.uid)
             Log.i("registery", "login in")
             Log.i("registery", user.uid)
+            Util.currentUser.value = User()
             mRef.addValueEventListener(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {}
                 override fun onDataChange(p0: DataSnapshot) {

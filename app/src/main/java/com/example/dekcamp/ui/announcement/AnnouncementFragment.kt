@@ -20,13 +20,10 @@ import com.example.dekcamp.R
 import com.example.dekcamp.data.Camp
 import com.example.dekcamp.data.HaveCamp
 import com.example.dekcamp.data.Util
-import com.example.dekcamp.ui.home.HomeFragment
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
-import jp.wasabeef.picasso.transformations.CropCircleTransformation
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
-import kotlinx.android.synthetic.main.activity_test.*
 
 class AnnouncementFragment : Fragment() {
 
@@ -328,28 +325,33 @@ class AnnouncementFragment : Fragment() {
         val key2 = mRef.child("have_camp").push().key!!
         hc.camp_id = key2
         mRef.child("have_camp").child(hc.hc_id).setValue(hc)
-        Log.i("getValueOn", "$newCamp")
+        Log.i("getValueOn", "have_camp $hc")
 
         Toast.makeText(context!!, "ข้อมูลถูกเพิ่มแล้ว", Toast.LENGTH_LONG).show()
 
 //        storeRef = FirebaseStorage.getInstance().reference
-        storeRef.child("images").child("camps").child(newCamp.camp_id).putFile(link)
-            .addOnSuccessListener {
+        val ref = storeRef.child("images").child("camps").child(newCamp.camp_id)
+        ref.putFile(link).addOnSuccessListener {
+            ref.downloadUrl.addOnSuccessListener { uri ->
+                mRef.child("camps").child(newCamp.camp_id).child("image").setValue(uri.toString())
                 Toast.makeText(context!!, "เพิ่มข้อมูลค่ายสำเร็จ", Toast.LENGTH_LONG).show()
+            }
+        }
+//            .addOnSuccessListener {
 
 //                val err: Drawable =
 //                    ContextCompat.getDrawable(context!!, R.drawable.ic_error_black_24dp)!!
 //
 //                Picasso.with(context!!).load(uri.toString())
 //                    .transform(CropCircleTransformation()).error(err).into(img)
-                val item = link.toString()
-                Log.i("getImage", "success")
-
-                val user = Util.currentUser.value!!
-                Log.i("getImage", "id: ${user.user_id}")
-                mRef.child("camps").child(newCamp.camp_id).child("image").setValue(item)
-            }
+//        val item = link.toString()
+//        Log.i("getImage", "success")
+//
+////                val user = Util.currentUser.value!!
+//        Log.i("getImage", "id: ${user.user_id}")
+//        mRef.child("camps").child(newCamp.camp_id).child("image").setValue(item)
     }
+//    }
 }
 //}
 //}

@@ -3,10 +3,10 @@ package com.example.dekcamp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class DrawerActivity : AppCompatActivity() {
+class CampDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_drawer)
+        setContentView(R.layout.activity_camp_detail)
     }
 }

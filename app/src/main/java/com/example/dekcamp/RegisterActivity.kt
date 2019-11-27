@@ -15,6 +15,7 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.dekcamp.data.User
+import kotlinx.android.synthetic.main.activity_form_register.*
 import com.example.dekcamp.data.Util
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthException
@@ -33,7 +34,7 @@ class RegisterActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_form_register)
 
         // Set the drop down view resource
         // Finally, data bind the spinner object with dapter
@@ -60,6 +61,8 @@ class RegisterActivity : AppCompatActivity() {
 
 
     fun onClickedBack(view: View) {
+        val intent = Intent(this, RegisterCampActivity::class.java)
+        startActivity(intent)
         finish()
     }
 

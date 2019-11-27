@@ -8,8 +8,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import kotlinx.android.synthetic.main.activity_register.*
-import kotlinx.android.synthetic.main.activity_register_camp.*
+import kotlinx.android.synthetic.main.activity_form_register_camp.*
 
 class RegisterCampActivity : AppCompatActivity() {
 
@@ -18,7 +17,7 @@ class RegisterCampActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_camp)
+        setContentView(R.layout.activity_form_register_camp)
 
         // Set the drop down view resource
         // Finally, data bind the spinner object with dapter
@@ -102,4 +101,10 @@ class RegisterCampActivity : AppCompatActivity() {
             dpd.show()
         }
     }
+
+    fun onClickedRegisterCamp(view: View) {
+        
+    }
+
+
 }

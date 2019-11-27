@@ -58,134 +58,149 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:orientation="vertical">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ประเภทค่าย"
-                        android:textSize="20dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:orientation="vertical">
 
-                    <Spinner
-                        android:id="@+id/spinnerCamp"
-                        android:layout_width="225dp"
-                        android:layout_height="39dp" />
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ประเภทค่าย"
+                            android:textSize="20dp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerCamp"
+                            android:layout_width="225dp"
+                            android:layout_height="39dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="จำนวนที่รับ"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/amountEditText"
+                            android:layout_width="109dp"
+                            android:layout_height="60dp"
+                            android:ems="10"
+                            android:inputType="numberSigned" />
+                    </LinearLayout>
+
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="จำนวนที่รับ"
-                        android:textSize="20dp" />
-
-                    <EditText
-                        android:id="@+id/amountEditText"
-                        android:layout_width="109dp"
-                        android:layout_height="60dp"
-                        android:ems="10"
-                        android:inputType="numberSigned" />
-                </LinearLayout>
-
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout4"
-                android:layout_width="wrap_content"
-                android:layout_height="56dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="5dp"
-                    android:orientation="vertical">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="จัดตั้งแต่"
-                        android:textSize="20dp"
-                        tools:layout_editor_absoluteX="170dp"
-                        tools:layout_editor_absoluteY="247dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/dateTV1"
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/textView23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="จัดตั้งแต่"
+                            android:textSize="20dp"
+                            tools:layout_editor_absoluteX="170dp"
+                            tools:layout_editor_absoluteY="247dp" />
+
+                        <TextView
+                            android:id="@+id/dateTV1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="dd/mm/yyyy"
+                            android:textSize="20dp"
+                            tools:layout_editor_absoluteX="164dp"
+                            tools:layout_editor_absoluteY="139dp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/fromButton"
+                        android:layout_width="60sp"
                         android:layout_height="wrap_content"
-                        android:text="dd/mm/yyyy"
-                        android:textSize="20dp"
-                        tools:layout_editor_absoluteX="164dp"
-                        tools:layout_editor_absoluteY="139dp" />
+                        android:text="Date"
+                        tools:layout_editor_absoluteX="173dp"
+                        tools:layout_editor_absoluteY="987dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ถึง"
+                            android:textSize="20dp"
+                            tools:layout_editor_absoluteX="194dp"
+                            tools:layout_editor_absoluteY="631dp" />
+
+                        <TextView
+                            android:id="@+id/dateTV2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="dd/mm/yyyy"
+                            android:textSize="20dp"
+                            tools:layout_editor_absoluteX="164dp"
+                            tools:layout_editor_absoluteY="399dp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/toButton"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        tools:layout_editor_absoluteX="177dp"
+                        tools:layout_editor_absoluteY="855dp" />
+
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/fromButton"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="Date"
-                    tools:layout_editor_absoluteX="173dp"
-                    tools:layout_editor_absoluteY="987dp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ถึง"
-                        android:textSize="20dp"
-                        tools:layout_editor_absoluteX="194dp"
-                        tools:layout_editor_absoluteY="631dp" />
-
-                    <TextView
-                        android:id="@+id/dateTV2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:text="dd/mm/yyyy"
-                        android:textSize="20dp"
-                        tools:layout_editor_absoluteX="164dp"
-                        tools:layout_editor_absoluteY="399dp" />
-
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/toButton"
-                    android:layout_width="60sp"
-                    android:layout_height="wrap_content"
-                    android:text="Date"
-                    tools:layout_editor_absoluteX="177dp"
-                    tools:layout_editor_absoluteY="855dp" />
 
             </LinearLayout>
 
@@ -315,10 +330,10 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout8"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
@@ -326,51 +341,60 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="15dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView34"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ค่าใช้จ่าย"
-                        android:textSize="20dp"
-                        tools:layout_editor_absoluteX="166dp"
-                        tools:layout_editor_absoluteY="1080dp" />
+                        android:layout_marginRight="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView34"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ค่าใช้จ่าย"
+                            android:textSize="20dp"
+                            tools:layout_editor_absoluteX="166dp"
+                            tools:layout_editor_absoluteY="1080dp" />
 
 
-                    <EditText
-                        android:id="@+id/costEditText"
-                        android:layout_width="120dp"
-                        android:layout_height="60dp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:layout_editor_absoluteX="146dp"
-                        tools:layout_editor_absoluteY="1133dp" />
+                        <EditText
+                            android:id="@+id/costEditText"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            tools:layout_editor_absoluteX="146dp"
+                            tools:layout_editor_absoluteY="1133dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="จ่ายเมื่อ"
+                            android:textSize="20dp" />
+
+
+                        <Spinner
+                            android:id="@+id/paySpinner"
+                            android:layout_width="199dp"
+                            android:layout_height="41dp"
+                            tools:layout_editor_absoluteX="106dp"
+                            tools:layout_editor_absoluteY="273dp" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="จ่ายเมื่อ"
-                        android:textSize="20dp" />
-
-
-                    <Spinner
-                        android:id="@+id/paySpinner"
-                        android:layout_width="199dp"
-                        android:layout_height="41dp"
-                        tools:layout_editor_absoluteX="106dp"
-                        tools:layout_editor_absoluteY="273dp" />
-
-                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -394,7 +418,7 @@
 
                 <EditText
                     android:id="@+id/oldEditText"
-                    android:layout_width="120dp"
+                    android:layout_width="180dp"
                     android:layout_height="60dp"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -439,6 +463,12 @@
                     tools:layout_editor_absoluteX="162dp"
                     tools:layout_editor_absoluteY="314dp" />
 
+                <ImageView
+                    android:id="@+id/fileImagePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="284dp"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
                 <TextView
                     android:id="@+id/textView45"
                     android:layout_width="wrap_content"
@@ -476,27 +506,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
 
-                <RadioButton
-                    android:id="@+id/haveRadioButton"
-                    android:layout_width="66dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="40dp"
-                    android:text="มี"
-                    tools:layout_editor_absoluteX="186dp"
-                    tools:layout_editor_absoluteY="791dp" />
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/nothaveRadioButton"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:text="ไม่มี"
-                    tools:layout_editor_absoluteX="178dp"
-                    tools:layout_editor_absoluteY="902dp" />
+                    <RadioButton
+                        android:id="@+id/haveRadioButton"
+                        android:layout_width="66dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:text="มี"
+                        tools:layout_editor_absoluteX="186dp"
+                        tools:layout_editor_absoluteY="791dp" />
+
+                    <RadioButton
+                        android:id="@+id/nothaveRadioButton"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="ไม่มี"
+                        tools:layout_editor_absoluteX="178dp"
+                        tools:layout_editor_absoluteY="902dp" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -530,9 +566,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginTop="40dp"
+                android:layout_marginBottom="32dp"
                 android:background="#CEB80F"
                 android:text="ส่งข้อมูล"
                 android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout14" />

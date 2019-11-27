@@ -322,9 +322,9 @@ class AnnouncementFragment : Fragment() {
 
         val hc = HaveCamp("", newCamp.camp_id, user.user_id, HaveCamp.OWNER)
         val key2 = mRef.child("have_camp").push().key!!
-        hc.camp_id = key2
+        hc.hc_id = key2
         mRef.child("have_camp").child(hc.hc_id).setValue(hc)
-        Log.i("getValueOn", "have_camp $hc")
+        Log.i("getValueOn", "have_camp ${hc.hc_id}")
 
         Toast.makeText(context!!, "ข้อมูลถูกเพิ่มแล้ว", Toast.LENGTH_LONG).show()
 

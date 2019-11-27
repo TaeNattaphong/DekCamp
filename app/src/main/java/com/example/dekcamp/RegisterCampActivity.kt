@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.RadioButton
 import android.widget.Spinner
+import com.example.dekcamp.data.Camp
 import kotlinx.android.synthetic.main.activity_form_register_camp.*
 
 class RegisterCampActivity : AppCompatActivity() {
@@ -103,8 +105,26 @@ class RegisterCampActivity : AppCompatActivity() {
     }
 
     fun onClickedRegisterCamp(view: View) {
-        
-    }
+        val camp_id = ""
+        val campname = nameCampEditText.text.toString()
+        val detail = descriptionEditText.text.toString()
+        val adress = placeEditText.text.toString()
+        val contact = contactEditText.text.toString()
+        val price = costEditText.text.toString().toInt()
+        val certificate = "มี"
+        val maxPeople = amountEditText.text.toString().toInt()
+        val minAge = oldEditText.text.toString().toInt()
+        val campStrat = dateTV1.text.toString()
+        val campEnd = dateTV2.text.toString()
+        val startRegis = ""
+        val endRegis = dateTV3.text.toString()
+        val vote = 0
+        val typeCamp = spinnerCamp.selectedItem.toString()
+        val amountPeople = 0
+        val payWhen = paySpinner.selectedItem.toString()
 
+        //create object camp
+        val camp = Camp(camp_id,campname,detail,adress,contact,price,certificate,maxPeople,minAge,campStrat,campEnd,startRegis,endRegis,vote,typeCamp,amountPeople,payWhen)
+    }
 
 }

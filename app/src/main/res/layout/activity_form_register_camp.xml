@@ -131,9 +131,9 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -153,6 +153,7 @@
                             android:textSize="20dp"
                             tools:layout_editor_absoluteX="164dp"
                             tools:layout_editor_absoluteY="139dp" />
+
                     </LinearLayout>
 
                     <Button
@@ -163,10 +164,19 @@
                         tools:layout_editor_absoluteX="173dp"
                         tools:layout_editor_absoluteY="987dp" />
 
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -182,7 +192,6 @@
                             android:id="@+id/dateTV2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
                             android:text="dd/mm/yyyy"
                             android:textSize="20dp"
                             tools:layout_editor_absoluteX="164dp"
@@ -198,8 +207,8 @@
                         tools:layout_editor_absoluteX="177dp"
                         tools:layout_editor_absoluteY="855dp" />
 
-                </LinearLayout>
 
+                </LinearLayout>
 
 
             </LinearLayout>
@@ -279,7 +288,6 @@
                         android:id="@+id/dateTV3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
                         android:layout_marginRight="20dp"
                         android:text="dd/mm/yyyy"
                         android:textSize="20dp"
@@ -364,7 +372,7 @@
                             android:layout_width="140dp"
                             android:layout_height="60dp"
                             android:ems="10"
-                            android:inputType="textPersonName"
+                            android:inputType="numberSigned"
                             tools:layout_editor_absoluteX="146dp"
                             tools:layout_editor_absoluteY="1133dp" />
 
@@ -429,7 +437,7 @@
                     android:id="@+id/textView40"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="จัดโดย"
                     android:textSize="20dp"
                     tools:layout_editor_absoluteX="176dp"
@@ -448,7 +456,7 @@
                     android:id="@+id/textView44"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="อัพโหลดภาพโปสเตอร์ค่าย"
                     android:textSize="20dp"
                     tools:layout_editor_absoluteX="94dp"
@@ -473,7 +481,7 @@
                     android:id="@+id/textView45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="ช่องทางติดต่อ"
                     android:textSize="20dp"
                     tools:layout_editor_absoluteX="146dp"
@@ -492,7 +500,7 @@
                     android:id="@+id/textView47"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="มีเกียรติบัตร, ประกาศนียบัตร หรือหนังสือรับรอง"
                     android:textSize="20dp"
                     tools:layout_editor_absoluteX="7dp"
@@ -516,22 +524,34 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/haveRadioButton"
-                        android:layout_width="66dp"
+                    <RadioGroup
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="40dp"
-                        android:text="มี"
-                        tools:layout_editor_absoluteX="186dp"
-                        tools:layout_editor_absoluteY="791dp" />
+                        android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/nothaveRadioButton"
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:text="ไม่มี"
-                        tools:layout_editor_absoluteX="178dp"
-                        tools:layout_editor_absoluteY="902dp" />
+                        <RadioButton
+                            android:id="@+id/haveRadioButton"
+                            android:layout_width="66dp"
+                            android:onClick="onRadioButtonClicked"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:text="มี"
+                            tools:layout_editor_absoluteX="186dp"
+                            tools:layout_editor_absoluteY="791dp" />
+
+                        <RadioButton
+                            android:id="@+id/nothaveRadioButton"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="ไม่มี"
+                            android:onClick="onRadioButtonClicked"
+                            tools:layout_editor_absoluteX="178dp"
+                            tools:layout_editor_absoluteY="902dp" />
+
+
+                    </RadioGroup>
+
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -570,6 +590,7 @@
                 android:background="#CEB80F"
                 android:text="ส่งข้อมูล"
                 android:textColor="#FFFFFF"
+                android:onClick="onClickedRegisterCamp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

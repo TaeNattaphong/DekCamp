@@ -47,7 +47,9 @@
                             android:id="@+id/textView2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="ค่ายอาสา" />
+                            android:layout_marginRight="20dp"
+                            android:text="ค่ายอาสา"
+                            android:textSize="18sp" />
 
                         <Button
                             android:id="@+id/button"
@@ -69,7 +71,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="มหกรรม ในความทรงจำ โดย ชื่อคนจัด" />
+                        android:text="มหกรรม ในความทรงจำ โดย ชื่อคนจัด"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/textView22"
@@ -82,13 +85,22 @@
                         android:id="@+id/textView24"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="รายละเอียดต่างๆของค่าย" />
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="รายละเอียดของค่าย" />
 
                 <TextView
                     android:id="@+id/textView27"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="_____________________________" />
 
                 <TextView

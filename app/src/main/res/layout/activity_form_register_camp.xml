@@ -446,7 +446,7 @@
                     tools:layout_editor_absoluteY="738dp" />
 
                 <EditText
-                    android:id="@+id/oldEditText"
+                    android:id="@+id/ageEditText"
                     android:layout_width="180dp"
                     android:layout_height="60dp"
                     android:ems="10"
@@ -541,7 +541,7 @@
                     tools:layout_editor_absoluteY="658dp" />
 
                 <TextView
-                    android:id="@+id/haveOrNothave"
+                    android:id="@+id/isCerficate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"

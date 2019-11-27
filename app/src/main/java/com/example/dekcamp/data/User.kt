@@ -10,5 +10,6 @@ data class User (
     var email: String = "",
     var phone: String = "",
     var allegic: String = "",
+    var image: String = "",
     var user_id: String = ""
 )

@@ -223,37 +223,58 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-                <TextView
-                    android:id="@+id/textView28"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="เข้าร่วมแบบ"
-                    android:textSize="20dp"
-                    tools:layout_editor_absoluteX="156dp"
-                    tools:layout_editor_absoluteY="1107dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="เข้าร่วมแบบ :"
+                        android:textSize="20dp"
+                        tools:layout_editor_absoluteX="156dp"
+                        tools:layout_editor_absoluteY="1107dp" />
+
+                    <TextView
+                        android:id="@+id/standOrGoback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/standRadioButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:text="ค้างคืน"
-                        tools:layout_editor_absoluteX="182dp"
-                        tools:layout_editor_absoluteY="362dp" />
 
-                    <RadioButton
-                        android:id="@+id/gobackRadioButton"
-                        android:layout_width="wrap_content"
+                    <RadioGroup
+                        android:id="@+id/typeCampRadioButtonGroup"
+                        android:layout_width="218dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:text="ไป-กลับ"
-                        tools:layout_editor_absoluteX="166dp"
-                        tools:layout_editor_absoluteY="823dp" />
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/standRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="ค้างคืน" />
+
+                        <RadioButton
+                            android:id="@+id/gobackRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="ไป-กลับ" />
+
+                    </RadioGroup>
+
+
 
                 </LinearLayout>
 
@@ -496,16 +517,6 @@
                     tools:layout_editor_absoluteX="42dp"
                     tools:layout_editor_absoluteY="1225dp" />
 
-                <TextView
-                    android:id="@+id/textView47"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="มีเกียรติบัตร, ประกาศนียบัตร หรือหนังสือรับรอง"
-                    android:textSize="20dp"
-                    tools:layout_editor_absoluteX="7dp"
-                    tools:layout_editor_absoluteY="658dp" />
-
 
             </LinearLayout>
 
@@ -518,6 +529,24 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="มีเกียรติบัตร, ประกาศนียบัตร หรือหนังสือรับรอง :"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="7dp"
+                    tools:layout_editor_absoluteY="658dp" />
+
+                <TextView
+                    android:id="@+id/haveOrNothave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="20sp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"

@@ -111,7 +111,7 @@ class RegisterCampActivity : AppCompatActivity() {
         val adress = placeEditText.text.toString()
         val contact = contactEditText.text.toString()
         val price = costEditText.text.toString().toInt()
-        val certificate = "มี"
+        val certificate = haveOrNothave.text.toString()
         val maxPeople = amountEditText.text.toString().toInt()
         val minAge = oldEditText.text.toString().toInt()
         val campStrat = dateTV1.text.toString()
@@ -119,12 +119,41 @@ class RegisterCampActivity : AppCompatActivity() {
         val startRegis = ""
         val endRegis = dateTV3.text.toString()
         val vote = 0
-        val typeCamp = spinnerCamp.selectedItem.toString()
+        val typeCamp = standOrGoback.text.toString()
         val amountPeople = 0
         val payWhen = paySpinner.selectedItem.toString()
+        val camp = spinnerCamp.selectedItem.toString()
 
         //create object camp
-        val camp = Camp(camp_id,campname,detail,adress,contact,price,certificate,maxPeople,minAge,campStrat,campEnd,startRegis,endRegis,vote,typeCamp,amountPeople,payWhen)
+        val camping = Camp(camp_id,campname,detail,adress,contact,price,certificate,maxPeople,minAge,campStrat,campEnd,startRegis,endRegis,vote,typeCamp,amountPeople,payWhen,camp)
     }
+
+    fun onRadioButtonClicked(view: View) {
+        if (view is RadioButton) {
+            // Is the button now checked?
+            val checked = view.isChecked
+
+            // Check which radio button was clicked
+            when (view.getId()) {
+                R.id.standRadioButton ->
+                    if (checked) {
+                        standOrGoback.setText("ค้างคืน")
+                    }
+                R.id.gobackRadioButton ->
+                    if (checked) {
+                        standOrGoback.setText("ไป-กลับ")
+                    }
+                R.id.haveRadioButton ->
+                    if (checked) {
+                        haveOrNothave.setText("มี")
+                    }
+                R.id.nothaveRadioButton ->
+                    if (checked) {
+                        haveOrNothave.setText("ไม่มี")
+                    }
+            }
+        }
+    }
+
 
 }

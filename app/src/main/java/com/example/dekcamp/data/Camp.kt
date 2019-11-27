@@ -17,5 +17,6 @@ data class Camp(
     var vote: Int,
     var typeCamp: String,
     var amountPeople: Int,
-    var payWhen: String
+    var payWhen: String,
+    var camp: String
 )

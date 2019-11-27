@@ -92,7 +92,7 @@ class RegisterActivity : AppCompatActivity() {
 
                 Toast.makeText(applicationContext, "คุณ ${newUser.firstname} ${newUser.lastname} ถูกเพิ่มเข้าสู่ระบบแล้ว", Toast.LENGTH_LONG).show()
 
-                Util.currentUser = newUser
+                Util.currentUser.value = newUser
 
 
                 val intent = Intent(this, LoadingActivity::class.java)

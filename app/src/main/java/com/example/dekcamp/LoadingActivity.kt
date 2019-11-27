@@ -28,7 +28,7 @@ class LoadingActivity : AppCompatActivity() {
             mRef.addValueEventListener(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {}
                 override fun onDataChange(p0: DataSnapshot) {
-                    Util.currentUser = p0.getValue(User::class.java)!!
+                    Util.currentUser.value = p0.getValue(User::class.java)!!
                 }
             })
             val intent = Intent(this, SidebarActivity::class.java)

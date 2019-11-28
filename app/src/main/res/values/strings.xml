@@ -27,4 +27,7 @@
     <string name="example_email">example@ku.th</string>
     <string name="Password">Password</string>
     <string name="Email">Email</string>
+    <string name="title_activity_query">QueryActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

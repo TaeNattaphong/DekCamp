@@ -12,6 +12,7 @@ class Util {
         var currentUser = MutableLiveData<User>().also {
             it.value = User()
         }
+        var lastSelected = ""
         val campType =
             arrayListOf(
                 "อาสา",

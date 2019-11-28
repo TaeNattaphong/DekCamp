@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="2000dp"
+    android:layout_height="wrap_content"
     tools:context=".CampDetailActivity">
 
     <LinearLayout
@@ -13,7 +13,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="2000dp">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,6 +56,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:onClick="onClickedVote"
+                            android:background="#E7D2D2"
                             android:text="ให้ดาว" />
                     </LinearLayout>
                 </LinearLayout>
@@ -65,14 +67,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/namebyTextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="มหกรรม ในความทรงจำ โดย ชื่อคนจัด"
-                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/voteTextView"
@@ -192,20 +186,6 @@
                     android:text="โรงแรม โฮมผุเตย จังหวัด กาญจนบุรี" />
 
                 <TextView
-                    android:id="@+id/textView43"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="จัดโดย"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/byTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ชื่อคนจัดค่าย" />
-
-                <TextView
                     android:id="@+id/textView48"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -267,7 +247,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="40dp"
-                    android:text="สมัครเลย!!" />
+                    android:background="#FF005A"
+                    android:onClick="onClickedRegis"
+                    android:text="สมัครเลย???" />
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

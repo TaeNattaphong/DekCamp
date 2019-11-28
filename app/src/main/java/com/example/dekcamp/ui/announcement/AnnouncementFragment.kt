@@ -323,6 +323,7 @@ class AnnouncementFragment : Fragment() {
         val hc = HaveCamp("", newCamp.camp_id, user.user_id, HaveCamp.OWNER)
         val key2 = mRef.child("have_camp").push().key!!
         hc.hc_id = key2
+        Log.i("getValueOn", "have_camp ${key2}")
         mRef.child("have_camp").child(hc.hc_id).setValue(hc)
         Log.i("getValueOn", "have_camp ${hc.hc_id}")
 

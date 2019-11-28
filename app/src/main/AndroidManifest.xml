@@ -13,12 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CampDetailActivity"></activity>
+        <activity
+            android:name=".QueryActivity"
+            android:label="@string/title_activity_query"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".CampDetailActivity" />
         <activity android:name=".CampActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".TestActivity"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".TestActivity" />
         <activity
             android:name=".LoadingActivity"
             android:theme="@style/AppTheme.NoActionBar">

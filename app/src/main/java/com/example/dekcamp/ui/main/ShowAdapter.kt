@@ -1,4 +1,4 @@
-package com.example.dekcamp.ui.home
+package com.example.dekcamp.ui.main
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -14,8 +14,8 @@ import com.example.dekcamp.data.Camp
 import com.squareup.picasso.Picasso
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 
-class PosterAdapter(val arr: MutableLiveData<ArrayList<Camp>>) :
-    RecyclerView.Adapter<PosterAdapter.ViewHolder>() {
+class ShowAdapter(val arr: MutableLiveData<ArrayList<Camp>>, val display: ArrayList<String>) :
+    RecyclerView.Adapter<ShowAdapter.ViewHolder>() {
 
     lateinit var context: Context
 
@@ -25,12 +25,13 @@ class PosterAdapter(val arr: MutableLiveData<ArrayList<Camp>>) :
         val camp = arr.value!![i]
         val img = holder.getImg
         val name = holder.getName
+        val desc = holder.getDescption
         val radius = 100
         val margin = 0
         val trans = RoundedCornersTransformation(radius, margin)
         Picasso.with(context).load(camp.image).transform(trans).into(img)
         name.text = camp.campname
-
+        desc.text = display[i]
     }
 
     override fun getItemCount(): Int {
@@ -39,7 +40,7 @@ class PosterAdapter(val arr: MutableLiveData<ArrayList<Camp>>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, pos: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.image_poster, parent, false)
+            .inflate(R.layout.show_item, parent, false)
         context = parent.context
 
         return ViewHolder(view)
@@ -47,6 +48,7 @@ class PosterAdapter(val arr: MutableLiveData<ArrayList<Camp>>) :
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val getImg = view.findViewById<ImageView>(R.id.img)
-        val getName = view.findViewById<TextView>(R.id.img_name)
+        val getName = view.findViewById<TextView>(R.id.name)
+        val getDescption = view.findViewById<TextView>(R.id.description)
     }
 }

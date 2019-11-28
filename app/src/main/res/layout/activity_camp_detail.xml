@@ -67,14 +67,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/namebyTextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="มหกรรม ในความทรงจำ โดย ชื่อคนจัด"
-                        android:textSize="18sp" />
-
-                    <TextView
                         android:id="@+id/voteTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -190,20 +182,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="โรงแรม โฮมผุเตย จังหวัด กาญจนบุรี" />
-
-                <TextView
-                    android:id="@+id/textView43"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="จัดโดย"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/byTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ชื่อคนจัดค่าย" />
 
                 <TextView
                     android:id="@+id/textView48"

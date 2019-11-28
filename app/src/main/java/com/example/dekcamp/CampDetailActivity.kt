@@ -1,32 +1,50 @@
 package com.example.dekcamp
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import com.example.dekcamp.data.Camp
+import kotlinx.android.synthetic.main.activity_camp_detail.*
 
 class CampDetailActivity : AppCompatActivity() {
 
-    val campTextView = findViewById<TextView>(R.id.campTextView)
-    val voteTV = findViewById<TextView>(R.id.voteTextView)
-    val descriptionTextView = findViewById<TextView>(R.id.descriptionTextView)
-    val campdayTextView = findViewById<TextView>(R.id.campdayTextView)
-    val amountTextView = findViewById<TextView>(R.id.amountTextView)
-    val oldTextView = findViewById<TextView>(R.id.oldTextView)
-    val placeTextView = findViewById<TextView>(R.id.placeTextView)
-    val costTextView = findViewById<TextView>(R.id.costTextView)
-    val certificateTextView = findViewById<TextView>(R.id.certificateTextView)
-    val closeTextView = findViewById<TextView>(R.id.closeTextView)
-    val contactTextView = findViewById<TextView>(R.id.contactTextView)
+    var state = false
+    var stateRegis = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camp_detail)
     }
 
+    fun onClickedVote(view: View) {
+        state=!state
+        if (state) {
+            button.setBackgroundColor(Color.parseColor("#FFC400"))
+            button.setTextColor(Color.parseColor("#FF0030"))
+        } else {
+            button.setBackgroundColor(Color.parseColor("#E7D2D2"))
+            button.setTextColor(Color.BLACK)
+        }
+    }
+
+    fun onClickedRegis(view: View) {
+        stateRegis=!stateRegis
+        if (stateRegis) {
+            regisButton.setBackgroundColor(Color.parseColor("#00FF83"))
+            regisButton.text = "สมัครแล้ว!!!"
+        } else {
+            regisButton.setBackgroundColor(Color.parseColor("#FF005A"))
+            regisButton.text = "สมัครเลย???"
+        }
+    }
+
+
+
     fun setComponentCamp(camp: Camp) {
         campTextView.text = camp.campType
-        voteTV.text = "มีคนโหวตให้แล้ว" + camp.vote.toString() + "คน"
+        voteTextView.text = "มีคนโหวตให้แล้ว " + camp.vote.toString() + " คน"
         descriptionTextView.text = camp.detail
         campdayTextView.text = camp.campStrat.toString() + "-" + camp.campEnd.toString() + "( " + camp.durationType + " )"
         amountTextView.text = camp.amountPeople.toString() + " คน"

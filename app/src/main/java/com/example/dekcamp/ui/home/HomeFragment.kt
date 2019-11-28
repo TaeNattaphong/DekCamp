@@ -12,14 +12,17 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dekcamp.CampDetailActivity
 import com.example.dekcamp.QueryActivity
 import com.example.dekcamp.R
+import com.example.dekcamp.RecyclerMenuClickListener
 import com.example.dekcamp.data.Camp
 import com.example.dekcamp.data.Util
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.gson.Gson
 
 class HomeFragment : Fragment() {
 
@@ -49,6 +52,21 @@ class HomeFragment : Fragment() {
         val r1 = root.findViewById<RecyclerView>(R.id.poster_recycler)
         r1.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         r1.adapter = PosterAdapter(arr)
+        r1.addOnItemTouchListener(
+                RecyclerMenuClickListener(
+                    context,
+                    r1,
+                    object : RecyclerMenuClickListener.OnItemClickListener {
+                        override fun onItemClick(view: View?, position: Int) {
+                            val intent = Intent(activity, CampDetailActivity::class.java)
+                            intent.putExtra("camp", Gson().toJson(arr.value!![position]))
+                            intent.putExtra("pos", "$position")
+                            startActivity(intent)
+                        }
+
+                        override fun onLongItemClick(view: View?, position: Int) {}
+                    }
+                ))
 
 
 
@@ -70,6 +88,21 @@ class HomeFragment : Fragment() {
         val r2 = root.findViewById<RecyclerView>(R.id.display_recycler)
         r2.layoutManager = LinearLayoutManager(context)
         r2.adapter = PosterDisplayAdapter(arr)
+        r2.addOnItemTouchListener(
+            RecyclerMenuClickListener(
+                context,
+                r2,
+                object : RecyclerMenuClickListener.OnItemClickListener {
+                    override fun onItemClick(view: View?, position: Int) {
+                        val intent = Intent(activity, CampDetailActivity::class.java)
+                        intent.putExtra("camp", Gson().toJson(arr.value!![position]))
+                        intent.putExtra("pos", "$position")
+                        startActivity(intent)
+                    }
+
+                    override fun onLongItemClick(view: View?, position: Int) {}
+                }
+            ))
 
         arr.observe(this, Observer {
             r1.adapter!!.notifyDataSetChanged()

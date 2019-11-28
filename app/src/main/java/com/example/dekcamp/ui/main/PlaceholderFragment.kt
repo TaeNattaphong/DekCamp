@@ -1,5 +1,6 @@
 package com.example.dekcamp.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +12,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dekcamp.CampDetailActivity
 import com.example.dekcamp.R
+import com.example.dekcamp.RecyclerMenuClickListener
 import com.example.dekcamp.data.Camp
 import com.example.dekcamp.data.Util
 import com.example.dekcamp.ui.home.PosterAdapter
@@ -19,6 +22,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.gson.Gson
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.Comparator
@@ -77,7 +81,7 @@ class PlaceholderFragment : Fragment() {
 
                         val timeA = a.endRegis - a.startRegis
                         val timeB = b.endRegis - b.startRegis
-                        timeB.compareTo(timeA)
+                        timeA.compareTo(timeB)
                     })
                     tmp.forEach {
                         val s = SimpleDateFormat("dd")
@@ -97,6 +101,21 @@ class PlaceholderFragment : Fragment() {
 
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.adapter = ShowAdapter(arr, desc)
+        recycler.addOnItemTouchListener(
+            RecyclerMenuClickListener(
+                context,
+                recycler,
+                object : RecyclerMenuClickListener.OnItemClickListener {
+                    override fun onItemClick(view: View?, position: Int) {
+                        val intent = Intent(activity, CampDetailActivity::class.java)
+                        intent.putExtra("camp", Gson().toJson(arr.value!![position]))
+                        intent.putExtra("pos", "$position")
+                        startActivity(intent)
+                    }
+
+                    override fun onLongItemClick(view: View?, position: Int) {}
+                }
+            ))
 
         arr.observe(this, Observer {
             recycler.adapter!!.notifyDataSetChanged()
